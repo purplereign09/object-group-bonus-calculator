@@ -46,3 +46,23 @@ console.log( employees );
 for(let employee of employees){
   console.log(employee);
 }
+
+function bonusCalculator(name){
+  let individualBonus = [ ];
+  for(let employee of employees){
+    if(name === employees.name){
+      individualBonus.push(employees.name);
+    }
+  }
+}
+
+function individualBonusCalculation(number) 
+  
+
+
+
+
+
+  let threeRating = (4 / 100) * employees.annualSalary;
+  let fourRating = (6 / 100) * employees.annualSalary;
+  let fiveRating = (10 / 100) * employees.annualSalary;
