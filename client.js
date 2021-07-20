@@ -1,3 +1,4 @@
+
 const employees = [
   {
     name: 'Atticus',
@@ -41,3 +42,7 @@ const employees = [
 // Ask questions when you don't.
 
 console.log( employees );
+
+for(let employee of employees){
+  console.log(employee);
+}

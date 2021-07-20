@@ -1,0 +1,4 @@
+Loop over the `employees` array and do the following:
+console.log the result.
+    use each employee object as the input to the function described below.
+ `console.log` the results of each iteration.
