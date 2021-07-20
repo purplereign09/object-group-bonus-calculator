@@ -43,26 +43,53 @@ const employees = [
 
 console.log( employees );
 
+//looping over employees to get the properties of the object
 for(let employee of employees){
   console.log(employee);
 }
 
+// function newCar(yearInput, makeInput, modelInput){
+//   console.log('in newCar:', yearInput, makeInput, modelInput);
+//   const newCarObject = {
+//     year: yearInput,
+//     make: makeInput,
+//     model: modelInput
+//   }
+//   garage.push(newCarObject);
+//   return true;
+// } // end newCar
+
+
+//function that takes in one employee object
 function bonusCalculator(name){
-  let individualBonus = [ ];
+  const individualBonus = [];
+    //property should contain the bonus percentage the employee is to receive. See section below for calculation
   for(let employee of employees){
-    if(name === employees.name){
-      individualBonus.push(employees.name);
+    if(name === employee.name){
+      individualBonus.push(employee.name);
+        let bonusPercent = 0;
+        if (employee.reviewRating <= 2) {
+          bonusPercent = 0;
+        } else if (employee.reviewRating === 3) {
+          bonusPercent = (4 / 100) * Number(employee.annualSalary);
+        } else if (employee.reviewRating === 4) {
+          bonusPercent = (6 / 100) * Number(employee.annualSalary);
+        } else if (employee.reviewRating === 5) {
+         bonusPercent = (10 / 100) * Number(employee.annualSalary);
+        }
+        individualBonus.push(bonusPercent); 
     }
+    return individualBonus;
   }
 }
 
-function individualBonusCalculation(number) 
+console.log(bonusCalculator('Atticus'));
+
+// function individualBonusCalculation(number){
   
-
-
-
-
-
-  let threeRating = (4 / 100) * employees.annualSalary;
-  let fourRating = (6 / 100) * employees.annualSalary;
-  let fiveRating = (10 / 100) * employees.annualSalary;
+// } 
+  
+// console.log(individualBonusCalculation(4))
+// } 
+  
+// console.log(individualBonusCalculation(4))
